@@ -6,7 +6,7 @@
 
 :root{
   --text-color: #FFFFFF;
-  --bg-url: url(./assets/bg-desktop-dark.jpg);
+  --bg-url: url(./assets/bg-mobile-dark.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5); 
   --surface-color: rgba(255, 255, 255, 0.1);
   --surface-color-hover: rgba(255, 255, 255, 0.05);
@@ -26,6 +26,7 @@
 
 body{
   background: var(--bg-url) no-repeat center top/cover;
+  height: 100vh;
 }
 
 body *{
@@ -167,4 +168,16 @@ footer{
   text-align: center;
   padding: 24px 0;
   font-size: 14px;
+}
+
+/* media queries */
+
+@media (min-width: 700px){
+  :root{
+    --bg-url: url(./assets/bg-desktop-dark.jpg);
+  }
+
+  .light{
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
